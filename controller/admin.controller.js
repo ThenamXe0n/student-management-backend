@@ -54,8 +54,8 @@ async function loginAdmin(req, res) {
 
     res.cookie("securetoken", token, {
       httpOnly: true,
-      sameSite: "Lax", // None,Lax,Strict
-      secure: false, // https secure connections ,
+      sameSite: "None", // None,Lax,Strict
+      secure: true, // https secure connections ,
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
